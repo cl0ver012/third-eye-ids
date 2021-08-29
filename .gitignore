@@ -1,0 +1,11 @@
+.pytest_cache
+thirdeye
+__pycache__
+models/ids_ANN_imbalanced_plain_weights.h5
+models/ids_ANN_imbalanced_plain.h5
+models/ids_ANN_imbalanced_plain_2_weights.h5
+models/standard_scaler_17_and_18_combined_unstratified.dat
+models/ANN_scaler_imbalanced_plain_1.dat
+test.html
+docs
+final_docs
