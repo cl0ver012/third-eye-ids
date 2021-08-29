@@ -12,8 +12,10 @@ Install the requirements using pip:
 
 Run the API and App separately.
 
-`python api.py`
-`python app.py`
+```
+python api.py
+python app.py
+```
 
 Upload the PCAP/CSV files captured uisng the CIC Flow Meter tool and the results will be displayed in a new page
 
