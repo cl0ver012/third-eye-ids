@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Eye - Intrusion Detection System</title>
+    
+    <!-- add favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/third-eye.png') }}" type="image/x-icon">
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark" style="background-color: #000;">
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='images/third-eye.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+            Third Eye
+        </a>
+    </nav>
+
+    <div class="container project-description-container">
+        <h4>Analysis Results</h4>
+    </div>
+
+    <div class="container">
+        <center>
+            <table class="table table-container">
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Packet ID</th>
+                        <th>Source IP Address</th>
+                        <th>Server IP</th>
+                        <th>VM Name</th>
+                        <th>Class ID</th>
+                        <th>Predicted Class</th>
+                        <th>Confidence Score</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    {% for index, rows in predicted.iterrows() %}
+                        <tr>
+                            <td>{{ rows['Packet ID'] + 1 }}</td>
+                            <td>{{ rows['Source IP Address'] }}</td>
+                            <td>{{ rows['Server IP'] }}</td>
+                            <td>{{ rows['VM Name'] }}</td>
+                            <td>{{ rows['Class ID'] }}</td>
+                            <td>{{ rows['Class Name'] }}</td>
+                            <td>{{ rows['Confidence Score'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/" class="btn btn-primary go-home">Go Home</a>
+        </center>
+    </div>
+</body>
+
+<footer class="footer">
+    <center>Developed by Akshay Kumaar M & Dilli Venkatesh C P</center>
+</footer>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Eye - Intrusion Detection System</title>
+    
+    <!-- add favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/third-eye.png') }}" type="image/x-icon">
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark" style="background-color: #000;">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='images/third-eye.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+            Third Eye
+        </a>
+    </nav>
+
+    <div class="container project-description-container">
+        <p>Third Eye is a Hybrid Intrusion Detection System that uses Deep Learning to predict network and application intrusions.
+             It has over 99.1 % accuracy in detecting latest as well as old intrusion attacks. It has been trained on the CIC IDS 2018
+              and CIC IDS 2017 datasets. Benchmarked and tested the AI's performance on the NSL KDD+, IDS 2018, and IDS 2017 test sets. 
+              This webpage is used to demonstrate the performance of the AI model and the data pipelines for intrusion detection by uploading
+               the server logs or captured packets. For more details visit this <a href="https://github.com/aksh-ai/third-eye-ids">link.</a></p>
+    </div>
+
+    <div class="container drop-container">
+        <center>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="log_file" id="log_file" class="file-upload" value="" onchange="readUrl(this)" data-title="Drop log/pcap file here &#13;&#10;(or)&#13;&#10; Click here to upload" multiple><br>
+                <button type="submit" class="btn btn-primary predict-btn" value="Examine">Examine</button>
+            </form>
+        </center>
+    </div>
+</body>
+
+<footer class="footer">
+    <center>Developed by Akshay Kumaar M & Dilli Venkatesh C P</center>
+</footer>
+
+</html>

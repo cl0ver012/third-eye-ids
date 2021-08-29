@@ -1,0 +1,108 @@
+.navbar { 
+    height: 60px;
+}
+
+.navbar-brand {
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+.navbar-brand img {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.project-description-container {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.drop-container {
+    margin-top: 50px;
+}
+
+.table-container {
+    border: 1px solid black;
+    margin-top: 25px;
+    width: 400px;
+}
+
+th {
+    font-weight: 500;
+    border: 1px solid black;
+    color: black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.file-upload {
+    min-height: 200px;
+    min-width: 350px;
+    height: 300px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.file-upload::before {
+    min-height: 200px;
+    min-width: 350px;
+    height: 300px;
+    width: 500px;
+    content: attr(data-title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px dashed rgb(182, 182, 182);
+    color: rgb(162, 162, 162);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.predict-btn {
+    transition: 0.3s;
+    margin-top: 50px;
+    background-color: rgb(136, 255, 0);
+    border: 0;
+    font-weight: 400;
+    padding: 10px 20px 10px 20px;
+}
+
+.predict-btn:hover {
+    background-color: #000;
+    color:rgb(136, 255, 0);
+    box-shadow: rgb(136, 255, 0) 0px 0px 20px 0px;
+}
+
+.go-home {
+    transition: 0.3s;
+    margin-top: 50px;
+    background-color: rgb(136, 255, 0);
+    border: 0;
+    font-weight: 400;
+    padding: 10px 20px 10px 20px;
+}
+
+.go-home:hover {
+    background-color: #000;
+    color:rgb(136, 255, 0);
+    box-shadow: rgb(136, 255, 0) 0px 0px 20px 0px;
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 80px 20px 20px 20px;
+    text-align: center;
+    color: #6a6a6a;
+}
